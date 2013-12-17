@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="win32">
+      <UniqueIdentifier>{84a8ebd7-7cf0-47f6-b75e-d441df67da40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes">
+      <UniqueIdentifier>{bb6c862e-70e9-49d9-81b7-3829a6f50471}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\DTech">
+      <UniqueIdentifier>{acddee59-d168-45cf-96ee-bebcf917c938}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\DTech\FiniteStateMachine">
+      <UniqueIdentifier>{132819b4-ca23-4004-ae93-b46ad3a827e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\DTech\FiniteStateMachine\FSM">
+      <UniqueIdentifier>{57c2573d-4329-46cc-868a-7ef7c2d29668}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\DTech\FiniteStateMachine\GameObjects">
+      <UniqueIdentifier>{5354b466-7cc9-4172-8133-cf5fa95203fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\DTech\FiniteStateMachine\Entity">
+      <UniqueIdentifier>{ae4e1fac-c4be-4ec8-9bce-c4de23be742a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\DTech\FiniteStateMachine\Messaging">
+      <UniqueIdentifier>{f37943ac-43e1-42ef-92e4-9cea1ec6ca9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\DTech\FiniteStateMachine\Utils">
+      <UniqueIdentifier>{b05b9fc9-447a-4ede-ba69-3b02bf5f5b7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\GameObjects">
+      <UniqueIdentifier>{ff4d1226-6bdc-4f03-ab10-740d1b3d380f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\GameObjects\Characters">
+      <UniqueIdentifier>{4a4a560d-26ab-43f6-b1f7-1e8a1eaab314}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\GameObjects\Characters\MainCharacter">
+      <UniqueIdentifier>{bc83f209-1192-4ce5-b2a6-f217894ade48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\GameObjects\Characters\MainCharacter\States">
+      <UniqueIdentifier>{28fa9279-34f1-4d8f-b2f1-361d4e189adc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\GameObjects\Scenery">
+      <UniqueIdentifier>{57d7870a-5609-4169-ace0-817d19435eda}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\AppDelegate.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\DTech\FiniteStateMachine\FSM\StateMachine.cpp">
+      <Filter>Classes\DTech\FiniteStateMachine\FSM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\DTech\FiniteStateMachine\Entity\BaseGameEntity.cpp">
+      <Filter>Classes\DTech\FiniteStateMachine\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\DTech\FiniteStateMachine\Entity\EntityManager.cpp">
+      <Filter>Classes\DTech\FiniteStateMachine\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\DTech\FiniteStateMachine\GameObjects\GameObject.cpp">
+      <Filter>Classes\DTech\FiniteStateMachine\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\DTech\FiniteStateMachine\GameObjects\CollisionObject.cpp">
+      <Filter>Classes\DTech\FiniteStateMachine\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\DTech\FiniteStateMachine\Messaging\MessageDispatcher.cpp">
+      <Filter>Classes\DTech\FiniteStateMachine\Messaging</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\DTech\FiniteStateMachine\Messaging\Message.cpp">
+      <Filter>Classes\DTech\FiniteStateMachine\Messaging</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\DTech\FiniteStateMachine\Utils\TimeCounter.cpp">
+      <Filter>Classes\DTech\FiniteStateMachine\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\GameplayScene.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\GameObjects\Characters\MainCharacter\MainCharacter.cpp">
+      <Filter>Classes\GameObjects\Characters\MainCharacter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\GameObjects\Characters\MainCharacter\States\TestStates.cpp">
+      <Filter>Classes\GameObjects\Characters\MainCharacter\States</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\GameObjects\Scenery\Platform.cpp">
+      <Filter>Classes\GameObjects\Scenery</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="main.h">
+      <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\AppDelegate.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\DTech\FiniteStateMachine\FSM\StateMachine.h">
+      <Filter>Classes\DTech\FiniteStateMachine\FSM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\DTech\FiniteStateMachine\FSM\State.h">
+      <Filter>Classes\DTech\FiniteStateMachine\FSM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\DTech\FiniteStateMachine\Entity\BaseGameEntity.h">
+      <Filter>Classes\DTech\FiniteStateMachine\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\DTech\FiniteStateMachine\Entity\EntityManager.h">
+      <Filter>Classes\DTech\FiniteStateMachine\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\DTech\FiniteStateMachine\GameObjects\CollisionObject.h">
+      <Filter>Classes\DTech\FiniteStateMachine\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\DTech\FiniteStateMachine\GameObjects\GameObject.h">
+      <Filter>Classes\DTech\FiniteStateMachine\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\DTech\FiniteStateMachine\Messaging\MessageDispatcher.h">
+      <Filter>Classes\DTech\FiniteStateMachine\Messaging</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\DTech\FiniteStateMachine\Messaging\Message.h">
+      <Filter>Classes\DTech\FiniteStateMachine\Messaging</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\DTech\FiniteStateMachine\Utils\TimeCounter.h">
+      <Filter>Classes\DTech\FiniteStateMachine\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GameplayScene.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GameObjects\Characters\MainCharacter\MainCharacter.h">
+      <Filter>Classes\GameObjects\Characters\MainCharacter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GameObjects\Characters\MainCharacter\States\TestStates.h">
+      <Filter>Classes\GameObjects\Characters\MainCharacter\States</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Constants.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GameObjects\Scenery\Platform.h">
+      <Filter>Classes\GameObjects\Scenery</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
