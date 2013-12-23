@@ -17,18 +17,18 @@ void CollisionObject::initWithGlobalState(const char *pszFileName, b2World* worl
 
 }
 
-void CollisionObject::initWithInitialState(const char *pszFileName, b2World* world, State* initialState)
+void CollisionObject::initWithInitialState(const char *pszFileName, b2World* world, State* initialState, int bodyType)
 {
 	mWorld = world;
 	GameObject::initWithInitialState(pszFileName, initialState);
-	this->addBodyToSprite();
+	this->addBodyToSprite(bodyType);
 	this->schedule( schedule_selector(CollisionObject::update));
 }
 
-void CollisionObject::addBodyToSprite()
+void CollisionObject::addBodyToSprite(int bodyType)
 {
 	mBodyDef = new b2BodyDef();
-	mBodyDef->type = b2_dynamicBody;
+	mBodyDef->type = (b2BodyType)bodyType;
 	mBodyDef->position.Set(this->getPositionX()/PTM_RATIO, this->getPositionY()/PTM_RATIO);
 	mBodyDef->userData = this;
 
@@ -43,6 +43,16 @@ void CollisionObject::addBodyToSprite()
 	mFixtureDef->isSensor = false;
 
 	mFixture = mBody->CreateFixture(mFixtureDef);
+}
+
+void CollisionObject::setCollisionObjectPosition(const Point& pos)
+{
+	this->setPosition(pos);
+
+	//first time positioning
+	b2Vec2 b2Position = b2Vec2(this->getPositionX()/PTM_RATIO, this->getPositionY()/PTM_RATIO);
+	float32 b2Angle = -1 * CC_DEGREES_TO_RADIANS(this->getRotation());
+	mBody->SetTransform(b2Position, b2Angle);
 }
 
 void CollisionObject::update(float dt)

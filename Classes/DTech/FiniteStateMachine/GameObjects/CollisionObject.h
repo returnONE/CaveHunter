@@ -6,6 +6,8 @@
 #include "GameObject.h"
 #include "Box2D\Box2D.h"
 
+
+
 namespace MOC
 {
 namespace GameObjects
@@ -27,10 +29,11 @@ public:
 
 	void initWithGeometryDescription(const char *textureFileName, const char *geometryDescriptionFile, b2World* world, State* initialState, State* globalState);
 	void initWithGlobalState(const char *pszFileName, b2World* world, State* initialState, State* globalState);
-	void initWithInitialState(const char *pszFileName, b2World* world, State* initialState);
+	void initWithInitialState(const char *pszFileName, b2World* world, State* initialState, int bodyType);
 
-	void addBodyToSprite();
+	void addBodyToSprite(int bodyType);
 	void bodyUpdate(float dt);
+	void setCollisionObjectPosition(const Point& pos);
 
 	//The following methods will be used in case of
 	virtual void OnCollisionEnter(b2Contact* contact){}

@@ -63,29 +63,33 @@ bool Gameplay::init()
 
 	//instancia manual ou toda classe filha (MainCharacter, Platform, etc) tem que ter seus overrides próprios pra instanciar seu próprio tipo
 	mMainCharacter = new MainCharacter();
-	mMainCharacter->initWithInitialState("main_character.png", mWorld, new TestStateB());
+	mMainCharacter->initWithInitialState("main_character.png", mWorld, new TestStateB(), b2_dynamicBody);
 	//mMainCharacter->SetYVelocity(1);
-	mMainCharacter->setPosition(Point(200,300));
+	mMainCharacter->setCollisionObjectPosition(Point(00,300));
 	spriteSheet->addChild(mMainCharacter, 0);
 
 	mPlatform = new Platform();
-	mPlatform->initWithInitialState("platform.png", mWorld, new TestStateB());
-	mPlatform->setPosition(Point(100,100));
+	mPlatform->initWithInitialState("platform.png", mWorld, new TestStateB(), b2_staticBody);
+	mPlatform->setCollisionObjectPosition(Point(100,100));
 	spriteSheet->addChild(mPlatform, 0);
 
 	mPlatform2 = new Platform();
-	mPlatform2->initWithInitialState("platform.png", mWorld, new TestStateB());
-	mPlatform2->setPosition(Point(238,100));
+	mPlatform2->initWithInitialState("platform.png", mWorld, new TestStateB(), b2_staticBody);
+	mPlatform2->setCollisionObjectPosition(Point(238,100));
 	spriteSheet->addChild(mPlatform2, 0);
 
-	moveAction = CCMoveTo::create( 1, Point( mMainCharacter->getPositionX(), -120));
-
+	//moveAction = CCMoveTo::create( 1, Point( mMainCharacter->getPositionX(), -120));
 	//mMainCharacter->runAction(moveAction);
 	
 	this->schedule( schedule_selector(Gameplay::update));
 
+	float teste0 = this->getPositionX();
+	float teste1 = mMainCharacter->getPositionX();
+	float teste2 = visibleSize.width/2;
+	float teste4 = teste1 - teste2;
+
 	this->setTouchEnabled(true);
-    
+	this->setPositionX(mMainCharacter->getPositionX() + visibleSize.width/2 /*+ mMainCharacter->getContentSize().width*/);
     return true;
 }
 
@@ -94,6 +98,8 @@ void Gameplay::update(float dt)
 	CCLayer::update(dt);
 	TimeCounter::Instance()->Update(dt);
 	MessageDispatcher::Instance()->DispatchDelayedMessages();
+
+	
 }
 
 void Gameplay::ccTouchesEnded(CCSet* touches, CCEvent* event)
